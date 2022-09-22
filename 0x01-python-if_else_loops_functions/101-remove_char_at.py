@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-for c in range(ord('z'), ord('a') - 1, -1):
-    print("{:c}".format((c - (ord('a') - ord('A'))) if c % 2 else c), end='')
+def remove_char_at(str, n):
+    if n >= 0:
+        newstr = str[:n] + str[n + 1:]
+        return (newstr)
+    else:
+        return (str)
