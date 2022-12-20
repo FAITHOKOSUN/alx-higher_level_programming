@@ -2,6 +2,7 @@
 const process = require('process');
 const args = process.argv;
 
+let arr = [];
 if (isNaN(args[2])) {
   console.log('Missing size');
 } else {
