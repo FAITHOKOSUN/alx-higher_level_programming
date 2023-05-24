@@ -1,9 +1,5 @@
 #!/usr/bin/node
-function readFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf-8');
-    console.log(content);
-  } catch (error) {
-    console.log(`An error occurred while reading the file: ${error}`);
-  }
-}
+const fs = require('fs');
+fs.readFile(process.argv[2], 'utf8', function (error, content) {
+  console.log(error || content);
+});
